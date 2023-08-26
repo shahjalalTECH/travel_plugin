@@ -1,0 +1,684 @@
+/* =====================================
+        #Common CSS 
+ =======================================*/
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,500&display=swap');
+
+:root {
+    --main-font: 'IBM Plex Sans', sans-serif;
+    --main-color: #027FEE;
+    --second-color: rgba(10, 10, 10, 0.12);
+}
+
+* {
+    font-family: var(--main-font);
+    color: #000;
+    box-sizing: border-box;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var(--main-font);
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+}
+
+p {
+    font-family: var(--main-font);
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+a:hover,
+a:focus {
+    text-decoration: none;
+    color: #000;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+}
+
+select {
+    appearance: none;
+}
+
+.select-tag-parent {
+    position: relative;
+}
+
+.select-tag-parent::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    content: "\f107";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 16px;
+    right: 15px;
+    color: #B5B5B5;
+}
+
+@media screen and (max-width: 576px) {
+    .select-tag-parent::after {
+        font-size: 16px;
+    }
+}
+
+input[type=checkbox] {
+    position: relative;
+    border: 2px solid var(--main-color);
+    border-radius: 2px;
+    background: none;
+    cursor: pointer;
+    line-height: 0;
+    margin: 0 .6em 0 0;
+    outline: 0;
+    padding: 0 !important;
+    vertical-align: text-top;
+    height: 20px;
+    width: 20px;
+    -webkit-appearance: none;
+    opacity: .5;
+}
+
+input[type=checkbox]:hover {
+    opacity: 1;
+}
+
+input[type=checkbox]:checked {
+    background-color: var(--main-color);
+    opacity: 1;
+}
+
+input[type=checkbox]:before {
+    content: '';
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    width: 4px;
+    height: 10px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    margin: -1px -1px 0 -1px;
+    transform: rotate(45deg) translate(-50%, -50%);
+    z-index: 2;
+}
+
+/* =====================================
+        #Skyline Form page design
+ =======================================*/
+
+#bbb-form-main-parent {
+    width: 1400px;
+    max-width: calc(100% - 60px);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+}
+
+#bbb-form-main-parent .bbb-form-title {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: var(--main-font);
+    background: var(--main-color);
+    padding: 10px 10px;
+    color: #fff;
+}
+
+#bbb-form-main-parent .bbb-form-fields {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 15px 0;
+    flex-wrap: wrap;
+}
+
+#bbb-form-main-parent .bbb-form-fields .bbb-form-field-item {
+    display: flex;
+    flex-direction: column;
+    flex-basis: calc(25% - 10px);
+    margin-bottom: 15px;
+}
+
+#bbb-form-main-parent .bbb-form-fields .bbb-form-field-item label {
+    font-size: 16px;
+    font-weight: 500;
+    font-family: var(--main-font);
+    margin-bottom: 5px;
+}
+
+#bbb-form-main-parent .bbb-form-fields .bbb-form-field-item select,
+#bbb-form-main-parent .bbb-form-fields .bbb-form-field-item input {
+    display: block;
+    width: 100%;
+    padding: 5px 15px;
+    border: 1px solid rgba(0, 0, 0, 0.31);
+    outline: none;
+    border-radius: 3px;
+    height: 40px;
+}
+
+.select2-container .select2-selection--single,
+#bbb-form-main-parent .bbb-form-fields .bbb-form-field-item select {
+    height: 40px !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 40px !important;
+    font-size: 16px;
+    font-family: var(--main-font);
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    top: 7px;
+    right: 10px;
+}
+
+.select2-container {
+    max-width: 100% !important;
+    width: unset !important;
+}
+
+.iti--allow-dropdown .iti__flag-container,
+.iti--separate-dial-code .iti__flag-container {
+    left: 9px;
+}
+
+.select2-container .select2-selection--multiple {
+    min-height: 40px;
+}
+
+#phone {
+    padding-left: 62px !important;
+}
+
+#bbb-form-main-parent .bbb-form-fields-second .bbb-form-field-item {
+    flex-basis: calc(50% - 10px);
+}
+
+#bbb-form-main-parent .bbb-form-fields-second {
+    border-top: 1px solid rgba(0, 0, 0, 0.31);
+    padding-top: 20px;
+    margin-top: 30px;
+}
+
+@media screen and (max-width: 1200px) {
+    #bbb-form-main-parent .bbb-form-fields .bbb-form-field-item {
+        flex-basis: calc(50% - 10px);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    #bbb-form-main-parent .bbb-form-fields .bbb-form-field-item {
+        flex-basis: calc(100%);
+    }
+}
+
+.bbb-new-append-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bbb-new-append-field input {
+    width: calc(100% - 90px) !important;
+}
+
+.bbb-new-append-field button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.31);
+    cursor: pointer;
+}
+
+.bbb-new-append-field {
+    margin-bottom: 10px;
+}
+
+/* =====================================
+        #Table crud operation
+ =======================================*/
+
+.bbb-delete-btn,
+.bbb-add-hotel {
+    display: block;
+    padding: 8px 15px;
+    border-radius: unset;
+    border: unset;
+    outline: unset;
+    background: var(--main-color);
+    color: #fff;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.bbb-add-hotel {
+    margin-top: 10px;
+}
+
+.bbb-delete-btn {
+    background: red;
+}
+
+.bbb-hotel-details-table select {
+    display: block;
+    width: 100%;
+    padding: 5px 15px;
+    border: 1px solid rgba(0, 0, 0, 0.31);
+    outline: none;
+    border-radius: 3px;
+    height: 40px;
+}
+
+.bbb-hotel-details-table .select2-container {
+    width: 100% !important;
+}
+
+.bbb-hotel-details-table .bbb-hotel-details-table-td {
+    width: 30%;
+    padding: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.197);
+    border-top: unset;
+    border-left: unset;
+}
+
+.bbb-hotel-details-table .bbb-hotel-details-table-td:last-child {
+    width: 10%;
+}
+
+.bbb-hotel-details-table .bbb-hotel-details-table-td:first-child {
+    border-left: 1px solid rgba(0, 0, 0, 0.197);
+}
+
+.bbb-hotel-details-table-tr {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bbb-hotel-details-table-parent {
+    width: 1000px;
+    max-width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.bbb-hotel-details-table {
+    border-top: 1px solid rgba(0, 0, 0, 0.197);
+}
+
+
+
+@media screen and (max-width: 1000px) {
+    .bbb-hotel-details-table .bbb-hotel-details-table-td {
+        width: 25%;
+    }
+
+    .bbb-hotel-details-table .bbb-hotel-details-table-td:last-child {
+        width: 25%;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .bbb-hotel-details-table-tr {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .bbb-hotel-details-table-tr:first-child .bbb-hotel-details-table-td:last-child {
+        display: none;
+    }
+
+    .bbb-hotel-details-table .bbb-hotel-details-table-td {
+        width: 33.333%;
+    }
+
+    .bbb-hotel-details-table .bbb-hotel-details-table-td:last-child {
+        width: 33.333%;
+        border-left: 1px solid rgba(0, 0, 0, 0.197);
+    }
+
+    .bbb-delete-btn {
+        width: 100%;
+    }
+
+    .bbb-hotel-details-table-tr-border .bbb-hotel-details-table-td:first-child,
+    .bbb-hotel-details-table-tr-border .bbb-hotel-details-table-td:nth-child(3) {
+        border-top: 1px solid rgba(0, 0, 0, 0.197);
+    }
+}
+
+/* =====================================
+        #Image Crop
+ =======================================*/
+
+
+ .layout {
+    height: 100%;
+  }
+  .layout * {
+    box-sizing: border-box;
+  }
+  .layout h1 {
+    font-family: Lobster, Arial;
+    text-align: center;
+  }
+  .layout .btn {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    z-index: 999;
+    padding: 6px 10px;
+    font-family: "Ubuntu";
+    font-size: 16px;
+    color: #fff;
+    background-image: -webkit-linear-gradient(top, #c92437 0%, #9e1c2b 100%);
+    background-image: linear-gradient(to bottom, #c92437 0%, #9e1c2b 100%);
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  .ic-container {
+    position: relative;
+  }
+  .ic-overlay-n,
+  .ic-overlay-e,
+  .ic-overlay-s,
+  .ic-overlay-w {
+    position: absolute;
+    background-color: #000;
+    opacity: 0.7;
+  }
+  .ic-overlay-n {
+    top: 0;
+  }
+  .ic-overlay-e {
+    top: 0;
+    right: 0;
+    bottom: 0;
+  }
+  .ic-overlay-s {
+    bottom: 0;
+  }
+  .ic-overlay-w {
+    top: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .ic-resize-handle-ne,
+  .ic-resize-handle-se,
+  .ic-resize-handle-nw,
+  .ic-resize-handle-sw {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #c92437;
+    z-index: 999;
+  }
+  .ic-resize-handle-nw {
+    top: -5px;
+    left: -5px;
+    cursor: nw-resize;
+  }
+  .ic-resize-handle-sw {
+    bottom: -5px;
+    left: -5px;
+    cursor: sw-resize;
+  }
+  .ic-resize-handle-ne {
+    top: -5px;
+    right: -5px;
+    cursor: ne-resize;
+  }
+  .ic-resize-handle-se {
+    bottom: -5px;
+    right: -5px;
+    cursor: se-resize;
+  }
+  .ic-crop-marker {
+    position: absolute;
+    z-index: 999;
+    border: solid 2px rgba(201, 36, 55, 0.5);
+    cursor: move;
+  }
+  .ic-move-handle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  .ic-container img {
+    display: block;
+    max-width: 100%;
+  }
+  
+  img {
+    max-width: 100%;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  .drop {
+    position: relative;
+    width: 50%;
+    height: 200px;
+    font-family: Lobster, Arial, serif;
+    font-size: 30px;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px dashed rgba(51, 51, 51, 0.4);
+    cursor: pointer;
+    transition-properties: border;
+    -webkit-transition-duration: 0.2s;
+            transition-duration: 0.2s;
+            border-radius: 10px;
+  }
+  .drop.dragging,
+  .drop:hover {
+    border-color: rgba(51, 51, 51, 0.8);
+  }
+  .drop p {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    margin-top: -19px;
+    margin-bottom: 0;
+    text-align: center;
+  }
+  .image-resize {
+    max-width: 800px;
+    margin: auto;
+  }
+  .btn {
+    margin-top: 20px;
+    padding: 8px 25px;
+    font-family: "Ubuntu";
+    font-size: 16px;
+    color: #fff;
+    background-image: -webkit-linear-gradient(top, #c92437 0%, #9e1c2b 100%);
+    background-image: linear-gradient(to bottom, #c92437 0%, #9e1c2b 100%);
+    border: 0;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  }
+  .btn .fa:first-child {
+    margin-right: 5px;
+  }
+  .thumbnail {
+    display: inline-block;
+    margin: auto;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 5px;
+  }
+  .thumbnail img {
+    display: block;
+    border-radius: 5px;
+  }
+
+  #sectionResize {
+    width: 800px;
+    max-width: 100%;
+   height: calc(100vh - 100px); 
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   background: #fff;
+   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+   padding: 20px;
+   border-radius: 10px;
+   z-index: 100000000000000000;
+   overflow: auto;
+  }
+
+  .bb-flight-parent {
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+  
+
+/*================ Updated Code =====================*/
+
+.select2-results__option button {
+    width: 100%;
+    padding: 5px 20px;
+    background: var(--main-color);
+    color: #fff;
+    border: unset;
+}
+.select2-results__option button i {
+    color: #fff;
+}
+
+.bb-submit-btn {
+    background: var(--main-color);
+    padding: 8px 15px;
+    margin-bottom: 50px;
+    border-radius: 3px;
+    color: #fff;
+    border: unset;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    min-width: 180px;
+}
+
+.bbb-form-fields-second-border {
+    border-top: unset !important;
+}
+
+#bbb-form-main-parent .bbb-form-fields-third .bbb-form-field-item {
+    flex-basis: calc(33.33333% - 10px);
+}
+
+@media screen and (max-width: 992px) {
+    #bbb-form-main-parent .bbb-form-fields-third .bbb-form-field-item {
+        flex-basis: 100%;
+    } 
+}
+
+.bbb-form-field-item p {
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 10px;
+}
+
+.bb-there-are-no-hotels {
+    border: 1px solid rgba(0, 0, 0, 0.197);
+    border-top: unset;
+    padding: 10px;
+    text-align: center;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__clear {
+    cursor: pointer;
+    float: right;
+    font-weight: bold;
+    height: 35px;
+    margin-right: 33px;
+    padding-right: 0px;
+}
+
+#bbb-form-main-parent .bbb-form-fields-third-padding {
+    padding-top: 0;
+    padding-bottom: 5px;
+}
+
+#bbb-form-main-parent .bbb-form-fields-padding {
+    padding-bottom: 0;
+    padding-top: 5px;
+}
+
+.bbb-hotel-details-main-parent {
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.bbb-add-new-hotel,
+.bbb-hotel-details-main-parent .bbb-remove-new-hotel {
+    width: max-content;
+    padding: 8px 30px;
+    border-radius: unset;
+    border: unset;
+    outline: unset;
+    background: #027FEE;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    min-width: 180px;
+    margin-left: auto;
+    display: block;
+    border-radius: 3px;
+}
+
+.bbb-add-new-hotel {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.bbb-hotel-details-main-parent .bbb-remove-new-hotel {
+    background: red;
+}
+
